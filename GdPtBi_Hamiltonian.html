@@ -10,7 +10,8 @@
         
         <link rel="stylesheet" href="PhDPresentation.css" />
         
-        <script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg.js" ></script>
+        <script type="text/javascript" id="MathJax-script"  src="mathjax/es5/tex-svg.js" ></script>
+        
     </head>
 
     <body>
@@ -20,12 +21,6 @@
                     <h2>Model Hamiltonian</h2>
                     <div class="border-blue" style="height: 70%;" id="replace">
                         <div style="width: 47%; height: 38%; background: white;  z-index: 3; position: absolute;"></div>
-                        <div style="width: 47%; height: 38%; position: absolute;" >
-                            $$H = \hbar v \sigma \cdot \mathbf{k}$$
-                        </div>
-
-                         <!-- 
-
                         <div style="width: 47%; height: 38%;  z-index: 3; position: absolute;" id="1">
                             <p id="left" style="font-size: 1.25vw;">
                                 $$H= \begin{pmatrix}
@@ -36,7 +31,7 @@
                             \end{pmatrix}$$
                             </p>
                         </div>
-                        
+
                         <div style="width: 47%; height: 38%; z-index: 2; position: absolute;" id="2">
                             <p style="font-size: 1.25vw;">
                                 $$H= \begin{pmatrix}
@@ -70,102 +65,12 @@
                             </p>
                         </div>
 
-                        -->
+                        
                     </div>
                     
-                     
-                </div>
-                <div class="border-blue", style="height: 40%; width: 100%;">
-                    <div style="width: 47%; height: 34%; background: white;  z-index: 3; position: absolute;"></div>
-
-                    <!-- <div style="z-index: 3;">
-                        <p style="font-size: 1.35vw;" >
-                            $$\begin{align} 
-                                Y_{\pm}&=-\frac{\hbar^2}{2 m_{xy}} \left(q_x^2 \pm q_y^2 \right) \\ \\
-                                \mu_{m_s}&= m_s g^* \mu_B, ~~~ g*=92\\ \\
-                                m_e&= \frac{3}{2} m_0, ~~~m_h= -\frac{1}{4} m_0 , ~~~ m_{xy}= \frac{1}{2} m_0\\ \\
-                                 \\
-                                
-                            \end{align}
-                            $$
-                        </p>
-                    </div> -->
-
-                    <!-- 
-                        <p style="margin-left: 1vw; margin-top: 4vh;">
-                            $$\begin{align} 
-                                &g*=92\\ 
-                                &m_e= \frac{3}{2} m_0 \\
-                                &m_h= -\frac{1}{4} m_0 \\
-                                &m_{xy}= \frac{1}{2} m_0
-                            \end{align}$$
-                        </p>
-                     -->
-
-                    <div id="1p" style="z-index: 2; width: 47%; height: 34%; position: absolute;">
-                        <div>
-                            <p style="font-size: 1.35vw; " >
-                                $$\color{red}{\mu_{m_s}= m_s g^* \mu_B}$$
-                            </p>
-                        </div>
-                        <div style="flex-direction: column;">
-                            <div style="font-size: 1.2vw; ">
-                                $$\boxed{\begin{align} 
-                                &m_e= \frac{3}{2} m_0 && \Delta= 1.4 ~g^* \mu_B \\
-                                &m_h= -\frac{1}{4} m_0 && \mu_{\pm \frac{3}{2}} = \frac{3}{2} g^* \mu_B \\
-                                &m_{xy}= \frac{1}{2} m_0 && \mu_{\pm \frac{1}{2}} = \frac{1}{2} g^* \mu_B 
-                                \end{align}}$$
-                            </div>
-                            <div>
-                                $$g^*=95$$
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="2p" style="z-index: 1; width: 47%; height: 34%; position: absolute;">
-                        <div>
-                            <p style="font-size: 1.35vw;" >
-                                $$\mu_{m_s}= m_s g^* \mu_B$$
-                                $$\color{red}{Y_{+}=-\frac{\hbar^2}{2 m_{xy}} \left(q_x^2 + q_y^2 \right)}$$
-                            </p>
-                        </div>
-                        <div style="flex-direction: column;">
-                            <div style="font-size: 1.2vw; ">
-                                $$\boxed{\begin{align} 
-                                &m_e= \frac{3}{2} m_0 && \Delta= 1.4 ~g^* \mu_B \\
-                                &m_h= -\frac{1}{4} m_0 && \mu_{\pm \frac{3}{2}} = \frac{3}{2} g^* \mu_B \\
-                                &m_{xy}= \frac{1}{2} m_0 && \mu_{\pm \frac{1}{2}} = \frac{1}{2} g^* \mu_B 
-                                \end{align}}$$
-                            </div>
-                            <div>
-                                $$g^*=95$$
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="3p" style="z-index: 0; width: 47%; height: 34%; position: absolute;">
-                        <div>
-                            <p style="font-size: 1.35vw;" >
-                                $$\mu_{m_s}= m_s g^* \mu_B$$
-                                $$Y_{+}=-\frac{\hbar^2}{2 m_{xy}} \left(q_x^2 + q_y^2 \right)$$
-                                $$\color{red}{Y_{-}=-\frac{\hbar^2}{2 m_{xy}} \left(q_x^2 - q_y^2 \right)}$$
-                            </p>
-                        </div>
-                        <div style="flex-direction: column;">
-                            <div style="font-size: 1.2vw; ">
-                                $$\boxed{\begin{align} 
-                                &m_e= \frac{3}{2} m_0 && \Delta= 1.4 ~g^* \mu_B \\
-                                &m_h= -\frac{1}{4} m_0 && \mu_{\pm \frac{3}{2}} = \frac{3}{2} g^* \mu_B \\
-                                &m_{xy}= \frac{1}{2} m_0 && \mu_{\pm \frac{1}{2}} = \frac{1}{2} g^* \mu_B 
-                                \end{align}}$$
-                            </div>
-                            <div>
-                                $$g^*=95$$
-                            </div>
-                        </div>
-                    </div>
                     
                 </div>
+                
             </div>
 
             <div class="border-blue", style="flex-direction: column;  width: 50%; height: 100%; ">
