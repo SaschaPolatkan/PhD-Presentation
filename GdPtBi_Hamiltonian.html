@@ -10,7 +10,7 @@
         
         <link rel="stylesheet" href="PhDPresentation.css" />
         
-        <script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg.js" ></script>
+        <script type="text/javascript" id="MathJax-script" src="mathjax/es5/tex-svg.js" ></script>
         
     </head>
 
@@ -31,6 +31,19 @@
                             \end{pmatrix}$$
                             </p>
                         </div>
+
+                        <div style="width: 47%; height: 38%; z-index: 2; position: absolute;" id="2">
+                            <p style="font-size: 1.25vw;">
+                                $$H= \begin{pmatrix}
+                                \frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} +\color{red}{\mu_{\frac{3}{2}} B}& 	0 & 		0 & 		0 \\
+                                0 & 		\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} + \color{red}{\mu_{\frac{1}{2}} B}& 		0 & 	0 \\
+                                0 & 		0 & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} +\color{red}{\mu_{-\frac{1}{2}} B}& 		0 \\
+                                0 & 		0 & 		0 & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} + \color{red}{\mu_{-\frac{3}{2}} B}
+                            \end{pmatrix} + \color{red}{\Delta \cdot B}$$
+                            </p>
+                        </div>
+
+                        
 
                         
                     </div>
@@ -53,6 +66,11 @@
 
 
 <script>
+    //Defining the variable pageNavOff as "True" turn the page navigation off
+    //This is not a boolean. Apparently true booleans are not good.
+    //let pageNavOff="true";
+
+
     let ind =0
     
 
@@ -63,9 +81,11 @@
     evt = evt || window.evt;
     if (evt.key=="Enter") {
         let zind1=Number(document.getElementById("1").style.zIndex);
-      
+        let zind2=Number(document.getElementById("2").style.zIndex);
         zind1=zind1+1;
-      
+        zind2=zind2+1;
+        document.getElementById("1").style.zIndex =String(zind1%4);
+        document.getElementById("2").style.zIndex =String(zind2%4);
 
     }
     }); 
