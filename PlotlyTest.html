@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <!-- Plotly.js -->
+    <script src="plotly.js"></script>
+  </head>
+  
+  <body>
+    <div id="myDiv" style="width: 700px; height: 500px;"></div>
+    <script>
+        var myPlot = document.getElementById('myDiv'),
+        x = [...Array(20).keys()],
+        y = [...Array(20).keys()],
+        data = [{x:x, y:y, type:'lines',
+                mode:'lines', marker:{size:0}
+                }],
+        layout = {hovermode:'closest',
+                title:'Click on Points'
+        };
+
+        Plotly.newPlot('myDiv', data, layout);
+
+        myPlot.on('plotly_click', function(){
+            alert('You clicked this Plotly chart!');
+        });
+    </script>
+  </body>

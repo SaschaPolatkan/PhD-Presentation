@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>TaP</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        <script type="text/javascript" id="MathJax-script"  src="mathjax/es5/tex-svg.js" ></script>
+        
+    </head>
+
+    <body>
+        <div class="page border", style="flex-direction: row;">
+            <div class="border-blue", style="display: block; width: 25%; height: 100%; text-align: center; margin-right: 1%;">
+                
+                
+                <div style="flex-direction: column; height: 100%;">
+                    <div style="flex-direction: column; height: 100%;">
+                        <div style="height: 35%; z-index: 20;">$$
+                        \begin{gather} 
+                        H=\begin{pmatrix} \Delta - \frac{\hbar \mathbf{q}^2}{2M} & \gamma(\mathbf{q})\\
+                        \gamma^*(\mathbf{q}) & -\Delta + \frac{\hbar \mathbf{q}^2}{2M}
+                        \end{pmatrix} \\ \\
+                        \gamma(\mathbf{q})= \gamma_0 - \frac{\hbar^2 q_x^2}{2m_x}- \frac{\hbar^2 q_y^2}{2m_y} 
+                        \end{gather} $$</div>
+                        
+                            
+                        <div style="width: 100%; height: 65%;">
+                            <img  src="Pictures/TaPModel.svg"  style="max-height: 100%; max-width: 100%; width: 100%;">
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            <!-- <div  style="flex-direction: column;  position: absolute;  top: 48vh; right: 3vw; z-index: 2;">
+                <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+                <p>Play</p>
+            </div> -->
+            <div class="border-blue", style="flex-direction: column;  width: 74%; height: 100%;">
+                <img src="Pictures/FigTaPModelCalcMeas.svg" width="100%", style="z-index: 3;">
+                <!-- <img id="1" src="Pictures/FigTaPModelOnly.svg" width="100%"> -->
+                <!-- <img  src="Pictures/FigTaPModelCalcMeas.svg" width="100%", style="z-index: 0;", id="2"> -->
+                
+            </div>
+        </div>
+        
+    </body>
+    </html>
+
+    <!-- <script id="script-interceptor">
+        //Defining the variable pageNavOff as "True" turn the page navigation off
+        //This is not a boolean. Apparently true booleans are not good.
+        //let pageNavOff="true";
+        
+    
+        document.addEventListener("keydown", (evt) => {
+        if (evt.isComposing ) {
+            return;
+        }
+        evt = evt || window.evt;
+        if (evt.key=="Enter") {
+            document.getElementById("1").src ="Pictures/FigTaPModelCalcMeas.svg";
+            document.getElementById("1").style.zIndex =3;
+        }
+        }); 
+        
+        
+    </script> -->
+
+<script src="PhDPresentation.js"></script>
+
+<!-- <img  src="Pictures/FigTaPModelCalcMeas.svg" width="100%"> -->

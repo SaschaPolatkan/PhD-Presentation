@@ -1,0 +1,24 @@
+
+function pagenav(evt) {
+    evt = evt || window.evt;
+    var isRight = false;
+    var isLeft = false;
+    let accnum= ""; 
+    if ("key" in evt) {isUp = (evt.keyCode === 38);}
+    if (isUp) {document.location.href =pages[currentindex-1];}
+    if ("key" in evt) {isDn = (evt.keyCode === 40);}
+    if (isDn) {window.location.href =pages[currentindex+1];} 
+    if ("key" in evt) {isLeft = (evt.keyCode === 37);}
+    if (isLeft) {focusPreviousElement();}
+    if ("key" in evt) {isRight = (evt.keyCode === 39);}
+    if (isRight) {focusNextElement();}
+
+    let isNumber = /^[0-9]$/i.test(evt.key);
+    //let num=Number(evt.key);
+    if(isNumber){
+        document.getElementById("page-number").focus();
+    };
+    let pagenum = document.getElementById('page-number').value
+    if (evt.key=="Enter"&& pagenum<pages.length){goToPage()}
+    if (evt.key=="Enter"&& pagenum>=pages.length){document.getElementById('page-number').value = ''}
+};

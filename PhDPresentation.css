@@ -1,0 +1,182 @@
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+html{
+    font-size: 1.5vw;
+    font-family: Source Sans Pro, Helvetica, sans-serif, 'Microsoft Jhenghei', 'Segoe UI';}
+
+
+
+
+/* Some general rules. Note that they can be overriden in the styles below */
+*{
+    box-sizing: border-box;  
+    margin: auto;  /* center everything */
+    overflow: hidden; /* deactivates scroll */
+    justify-content: center;
+    align-content: center;
+}
+
+div{
+    display:flex;
+} /* makes every div flex, can be overridden (I think) */
+
+/* 
+Unfortunately, my browser throws an error if I try making all child elements of body "display:flex" 
+This is why I choose a special div called "page" to define the page, rather than using body.
+*/
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    font-size: 3.75vw;
+}
+
+h2{
+    font-size: 3vw;
+}
+
+
+
+.page{
+    /* height: 95vh; */
+    aspect-ratio: 16/8;
+    max-height: 95vh;
+    width: 95vw;
+    animation: fadein 1s;
+}
+
+.element, .element_marked{
+    display: block;
+    
+    
+    width: calc(53vw/32 );
+    height: calc(1.75vw);
+    
+    overflow:hidden;
+    color: transparent;
+}
+
+.element_marked{
+    border:0.2vw solid black; 
+    box-sizing: border-box;
+}
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+.border{
+    border: 0.25vw solid red;
+    border-color: #00000000;
+}
+
+.border-blue{
+    border: 0.2vw solid blue;
+    border-color: #00000000;
+}
+
+.arrow-down{
+    animation: arrow-load 2s infinite;
+}
+@keyframes arrow-load {
+    0%{
+        transform: translate(0vh, -2vh);
+    }
+    100%{
+        transform: translate(0vh, 2vh);
+    }
+}
+
+
+
+.ListOfContents{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.ListOfContents button{
+    text-align: left;
+    font-weight: bold;
+    margin: 2vh;
+    margin-left: 0;
+    padding-left: 3vh;
+    color: black;
+    font-size: 1.5rem;
+    width: 40vw;
+    height: 10vh;
+    border-radius: 1vh;
+    border: 0.25vw solid black;
+    background-color: white;
+}
+
+/* .ListOfContents button{color: black;box-shadow: 6px 6px 0px 0px #000000} */
+button{
+    color: black;
+    padding: 2vh;
+    font-size: 1.5rem;
+    margin: 2vh;
+    border-radius: 1vh;
+    border: 0.25vw solid black;
+    background-color: white;
+    box-shadow: 6px 6px 0px 0px #000000;}
+
+
+
+
+/* button#imgtheo{
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("Pictures/Theory.png");
+    background-position: 60% 60%;
+} */
+
+/* .ListOfContents button:focus {
+    border-radius: 1vh;
+    border-color: red;
+    box-shadow: 6px 6px 0px 0px red;
+    outline: none;
+} */
+
+button:focus, button:hover {
+    border-radius: 1vh;
+    border-color: red;
+    box-shadow: 6px 6px 0px 0px red;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quote{
+    /* border: 0.25vw solid black; */
+    border: none;
+    border-radius: 1vw;
+    color: white;
+    background-color: #5b5b5b;
+    padding: 1vw 0vw 1vw 0vw;
+}
+
+.one {
+    z-index: 1;
+    position: absolute;
+    width: 47%;
+    height: 94%;
+    background: red;
+  }
+  
+  .two {
+    z-index: 0;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background: blue;
+  }

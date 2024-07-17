@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Introduction</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        <style>
+            .slideleft{
+                animation: slideleft 2s; animation-timing-function: ease; animation-fill-mode: forwards;
+            }
+
+            @keyframes slideleft {
+            0% { transform: translateX(0); }
+            100%   { transform: translateX(calc(-95vw / 2 + 50%)); }
+        }
+        </style>
+        
+        <script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg.js" ></script>
+    </head>
+
+    <body>
+       
+        
+        <div class="page border", style="flex-direction: column; ">
+
+            <div style="height: 12%;">
+                <h1>Weyl Semimetals</h1>
+            </div>
+
+            <div id="wrap", style=" flex-direction: row; height: 88%;width: 100%;">
+                <div class="border-blue", id="addslide", style=" display: inline-block; width: 50%; height: 100%; ">
+                    <div style="display: inline-block; width:  100%;">
+                        <div style="display: inline-block; width:  48%;">
+                            <p align="center" style="font-size: 1.5vw;  font-family: 'Calibri'" ><i>PRB</i> <b>78</b>, 165313 (2008) </p>    
+                            <img src="Pictures/MurakamiPhase.svg" width="100%">
+                        </div>
+                        <img src="Pictures/Weyl_model.svg" width="48%">
+                    </div>
+                    <img  src="Pictures/DiracToWeylCones2.svg"  width="100%" >
+                </div>
+    
+                <!-- <div class="border-blue", style="flex-direction: row;  width: 60%; height: 100%;">
+                    <p align="center" style="font-size: 1.5vw;  font-family: 'Calibri'" ><i>PRB</i> <b>78</b>, 165313 (2008) </p>
+                    <img src="Pictures/MurakamiPhase.svg" width="50%">
+                    <img src="Pictures/Weyl_model.svg" width="50%">
+                    
+                </div> -->
+                <div  style="flex-direction: column;  position: absolute;  top: 50vh; right: 4vw; z-index: 10;">
+                    <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+                    <p></p>
+                    </div>
+                
+            </div>
+
+            <p id="pcount" style="position: absolute; z-index: 0;"></p>
+            
+            
+            
+        </div>
+        
+    </body>
+    </html>
+
+    <script id="script-interceptor">
+        //Defining the variable pageNavOff as "True" turn the page navigation off
+        //This is not a boolean. Apparently true booleans are not good.
+        //let pageNavOff="true";
+        document.addEventListener("keydown", (evt) => {
+        if (evt.isComposing ) {
+            return;
+        }
+
+        let count = Number(document.getElementById("pcount").style.zIndex);
+
+        evt = evt || window.evt;
+        if (evt.key=="Enter"&&count==0) {
+            /* document.getElementById("addanim").addClass('slideleft'); */
+            document.getElementById("addslide").style="display: inline-block; width: 49.9%; height: 100%; animation: slideleft 1s; animation-timing-function: ease; animation-fill-mode: forwards;";
+            var iDiv = document.createElement('div');
+            iDiv.className ="border-blue"
+            iDiv.style=" display: inline-block; width: 50%; height: 100%;"
+            /* iDiv.innerHTML='<p>askjdfhjkashdfjkadshf </p>'; */
+            iDiv.innerHTML=`<div style="display: inline-block; width: 100%; height: 100%; text-align: center; ">
+                        <img  src="Pictures/FigMonopoles2.svg"   style="border-radius: 0vh; height: 95%; max-height: 95%; max-width: 100%;">
+                    </div>`;
+                setTimeout(() => {
+                    document.getElementById("wrap").appendChild(iDiv); 
+                    document.getElementById("addslide").style="display: inline-block; width: 50%; height: 100%; transform: translateX(0);";
+                }, "800");
+            document.getElementById("pcount").style.zIndex =String(1);
+            /* document.getElementById("wrap").appendChild(`
+                <div class="border-blue", style="flex-direction: column;  width: 50%; height: 100%;">
+                    <div style="display: inline-block; width:  100%; text-align: center; ">
+                        <img  src="Pictures/FigMonopoles2.svg"  width="100%" style="border-radius: 2vh; max-height: 100%;">
+                    </div>
+                </div>`) */
+        }
+        }); 
+    </script>
+<script src="PhDPresentation.js"></script>

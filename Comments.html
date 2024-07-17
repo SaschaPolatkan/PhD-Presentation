@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Example Site</title>
+        <meta name="description" content="An example HTML site"/>
+        <meta name="author" content="me"/>
+
+        <!-- This connects your CSS stylesheet-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="PhDPresentation.css" />
+    </head>
+
+    <body>
+        <div class="page border", style="flex-direction: column;">
+            
+            We want to prefetch (=preload) coming pages and link to different html sites. <br>
+            An alternative would be to implement an observer and do lazy loading. Then on can implement an actual scroll. <br>
+            Note however that for our usecase an actual scroll is probably god awful. This is better for long corpo pages that <br>
+            you can scroll down on forever, having pictures load in one after another. <br>
+            In our case we should fake the scroll animation by animating the outgoing page and the incoming page going upwards or <br>
+            sideways when loaded/unloaded. Best however is probably just a fade-in animation, which I have already implemented on the <br> 
+            page-class. Use the following code for prefetching, and see the comments in the html document:<br>
+            &ltlink rel="prefetch" href="/path/to/prefetch" /&gt"
+            <!-- https://stackoverflow.com/questions/7830675/how-can-i-preload-a-page-using-html5#:~:text=There%20are%20a%20couple%20of,of%20the%20document. -->
+            <br>
+            Animations: https://plotly.com/javascript/animations/
+            <br>
+            3d animations are possible: https://community.plotly.com/t/animate-a-scatter3d-plot/9949
+
+
+        </div>
+        
+    </body>
+    </html>
+
+
+
+<script src="PhDPresentation.js"></script>

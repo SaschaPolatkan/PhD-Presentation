@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Topology</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        
+        <script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg.js" ></script>
+    </head>
+
+    <body>
+        <div class="page border", style="flex-direction: column;">
+            <div  style="flex-direction: column;  position: absolute;  top: 48vh; right: 3vw; z-index: 10;">
+                <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+                <p></p>
+            </div>
+            <h1>Chiral Anomaly</h1>
+            <div class="border", style="width: 100%; height: 100%; display: block; text-align: center; position: relative">
+                
+                <img id="chiral" src="Pictures/Weyl_LLsKz.svg" style="width: 98%; max-height: 100%; margin-left: -4vw;">
+            </div>
+            
+        </div>
+        
+    </body>
+    </html>
+
+<script id="script-interceptor">
+    //Defining the variable pageNavOff as "True" turn the page navigation off
+    //This is not a boolean. Apparently true booleans are not good.
+    //let pageNavOff="true";
+    
+
+    document.addEventListener("keydown", (evt) => {
+    if (evt.isComposing ) {
+        return;
+    }
+    evt = evt || window.evt;
+    if (evt.key=="Enter") {
+        document.getElementById("chiral").src ="Pictures/Weyl_CA.svg"
+        
+    }
+    }); 
+    
+    
+</script>
+<script src="PhDPresentation.js"></script>

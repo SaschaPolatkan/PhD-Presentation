@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>GdPtBi</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        
+        <script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg.js" ></script>
+    </head>
+
+    <body>
+        
+       
+
+        <div  style="flex-direction: column; width: 100vw; height: 100vh;">
+            <div style="height: 8vh; position: absolute; top: 5%; width: 100vw;">            
+                <h1 style="z-index: 1; ">Optical Conductivity - Different Zeeman Shifts</h1>
+            </div>
+            <div class="border-blue", style="flex-direction: row; position: absolute; width: 90vw; margin-left: 0%; height: 90vh; top: 12%; left: 4%;">
+                <div style="width: 10%;"></div>
+                <img src="Pictures/HZee3o2.png"   style="width: 20vw; background: transparent; position: absolute; top:8%; left: 17%; ">
+                <img src="Pictures/Gif00_Le.png" style="background: transparent; height: 88%;" id="replace">
+                <img src="Pictures/Colorbar_GdPtBi_Simple.png" style="height: 78.5%; padding-bottom: 2.5%; ">
+                <div style="width: 15%;"></div>
+            </div>
+        </div>
+        <div style="flex-direction: column;  position: absolute;  top: 48vh; right: 4vw;">
+            <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+            <p></p>
+        </div>
+
+        <!-- <div class="page border", style="flex-direction: column;">
+            <h1 style="padding: 0vh 0vw 7vh 0vw;  z-index: 1;">Optical Conductivity - Different Zeeman Shifts</h1>
+            <div class="border-blue", style="flex-direction: row; position: relative;">
+                <img src="Pictures/HZee3o2.png"   style="width: 35%; background: transparent; position: absolute; top: 3%; left: 10%; ">
+                <img src="Pictures/Gif00_He.png" style="height: 100%;  padding: 0vh 0vh ; background: transparent;" id="replace">
+                <img src="Pictures/Colorbar_GdPtBi_Simple.png" style="height: 88%;  padding: 0vh 0vw 2.5% 2%; background: transparent;">
+            </div>
+        </div>
+        <div style="flex-direction: column;  position: absolute;  top: 48vh; right: 5vw;">
+            <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+            <p>Play</p>
+        </div> -->
+        
+        
+    </body>
+    </html>
+
+    
+
+    <script id="script-interceptor">
+        //Defining the variable pageNavOff as "True" turn the page navigation off
+        //This is not a boolean. Apparently true booleans are not good.
+        //let pageNavOff="true";
+        
+    
+        document.addEventListener("keydown", (evt) => {
+        if (evt.isComposing ) {
+            return;
+        }
+        evt = evt || window.evt;
+        if (evt.key=="Enter") {
+            image = document.getElementById('replace');
+            image.src="Pictures/GdPtBiHe_Once.gif"
+        }
+        }); 
+        
+        
+    </script>
+
+<script src="PhDPresentation.js"></script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>GdPtBi</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        
+        <script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg.js" ></script>
+        <style>
+            a:link {
+              color: green;
+              background-color: transparent;
+              text-decoration: none;
+            }
+            
+            a:visited {
+              color: pink;
+              background-color: transparent;
+              text-decoration: none;
+            }
+
+            .parent{
+                width:95%;
+                height:80%;
+                position:absolute;
+                z-index:0;
+            }
+
+            .inner{
+                position:absolute;
+                
+                width:95%;
+                height:80%;
+            }
+            
+            </style>
+    </head>
+
+    <body>
+        
+        <div class="page border">
+          
+            
+            <div  style="max-height: 16%; height: 16%; position: absolute; width: 95%;">
+              <h1 style="padding-bottom: 1%;  border-bottom: 2px solid; text-align: center;  top: 0%;">
+                <!-- G<span style="text-transform: lowercase">d</span>P<span style="text-transform: lowercase">t</span>B<span style="text-transform: lowercase">i</span> <br> <br>  -->
+                G<span style="text-transform: lowercase">d</span>P<span style="text-transform: lowercase">t</span>B<span style="text-transform: lowercase">i</span> -  Field-Tunable Inversion
+              </h1>
+              <div  style="flex-direction: column;  position: absolute;  top: 0%; right: 0%;">
+                <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+                <p></p>
+                </div>
+            </div>
+
+            <!-- <div class="border-blue"  style="width: 100%; height: 100%; ">
+              <div class="border-blue"  style="width: 100%; height: 100%;">
+                <img  src="Pictures/HeuslersBandGaps.svg" style="height: 100%; max-width: 100%;  position: relative; display: inline;" >
+                <div style="height: 100%;">
+                  <img  src="Pictures/HeuslersBandGaps_Magnetic_Overlay.svg" style="  display: inline; z-index: 2;" >
+                </div>
+              </div>
+            </div> -->
+
+            <div id="imgs" style="height: 83%; max-height: 83%;position:absolute; top: 16%;">
+              <img src="Pictures/HeuslersBandGaps.svg" style="height: 100%; max-width: 92%; "/>
+            </div>
+		    </div>
+        
+        
+    </body>
+</html>
+
+<script id="script-interceptor">
+  document.addEventListener("keydown", (evt) => {
+        if (evt.isComposing ) {
+            return;
+        }
+
+  evt = evt || window.evt;
+  if (evt.key=="Enter") {
+      /* document.getElementById("addanim").addClass('slideleft'); */
+      document.getElementById("imgs").innerHTML=`<img src="Pictures/HeuslersBandGaps.svg" style="height: 100%; max-width: 92%; "/> <img src="Pictures/HeuslersBandGaps_Magnetic_Overlay.svg"  style="position:absolute; height: 100%; max-width: 92%; "/>`
+  }})
+</script>
+
+
+<script src="PhDPresentation.js"></script>
+
+

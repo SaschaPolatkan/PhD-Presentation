@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>TaP</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        <script type="text/javascript" id="MathJax-script"  src="mathjax/es5/tex-svg.js" ></script>
+    </head>
+
+    <body>
+        <div class="page border", style="flex-direction: column;">
+            <div style="height: 12%;">
+                <h2 style="padding: 0vh 0vw 0vh 0vw ; ">TaP - Model Hamiltonian </h2>
+            </div>
+
+            <div class="border-blue" style="display: inline-block; height: 100%;width: 90%; text-align: center;">
+                <div class="border-blue", style="display: inline-block; max-width: 45%; height: 100%; text-align: center; ">
+                    <div style="flex-direction: column; height: 100%; width: 100%;">
+                        <div style="flex-direction: row; height: 30%; ">
+                            <div style="padding-right: 0%;">$$H=\begin{pmatrix} \Delta - \frac{\hbar \mathbf{q}^2}{2M} & \gamma(\mathbf{q})\\
+                            \gamma^*(\mathbf{q}) & -\Delta + \frac{\hbar \mathbf{q}^2}{2M}
+                            \end{pmatrix} ~~~~$$</div>
+                            <div style="font-size:  1.2vw;;">
+                                $$\boxed{\begin{align} 
+                                M&=m_0/4\\
+                                m_y&=m_0/4 \\
+                                m_x&=3 m_0 \\
+                                \gamma_0&=10~\text{meV} \\
+                                \Delta &= 35~\text{meV}
+                                \end{align}}$$
+                            </div>
+                        </div>
+                        <div style="flex-direction: row; width: 100%; height: 70%;">
+                            <img  src="Pictures/TaPModel.svg" style="height: 90%; width: 90%;"> 
+                        </div>
+                    </div>
+                </div>
+                <div class="border-blue", style="display: inline-block; height: 100%; width: 10%;"> </div>
+
+                <div class="border-blue", style="display: inline-block; height: 100%; max-width: 45%;">
+                    <div style="flex-direction: column; height: 85%;">
+                        <div style="flex-direction: row; height: 20%;">
+                            <div>$$\gamma(\mathbf{q})= \gamma_0 - \frac{\hbar^2 q_x^2}{2m_x}- \frac{\hbar^2 q_y^2}{2m_y} ~~~$$</div>
+                        </div>
+                        <div style="width: 100%; height: 80%;">
+                            <img  src="Pictures/FigNodalLinesTaPModel.png" style="max-width: 90%; max-height: 100%;" >
+                        </div>
+                            
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+    </html>
+
+
+<script src="PhDPresentation.js"></script>

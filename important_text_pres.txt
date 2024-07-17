@@ -1,0 +1,5 @@
+Now, Weyl cones are interesting among other things, because of their many analogies to particle physics.
+First of all, of course, they host Weyl fermions, a hypothetical chiral fermion, where chiral means that its spin is aligned with its velocity.
+So, around the Weyl cone, in all three k-space directions, the spins are aligned with the Weyl point; all of them pointing either in or out.
+So for the electron plasma, the Weyl point effectively acts like a magnetic monopole, which brings me a point that Dirac made way back in 1931.
+Back then thought about real magnetic monopoles. He found that, if they existed, ....

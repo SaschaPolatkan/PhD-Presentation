@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Example Site</title>
+        <meta name="description" content="An example HTML site"/>
+        <meta name="author" content="me"/>
+
+        <!-- This connects your CSS stylesheet-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        
+    </head>
+
+    <body>
+        <div class="page", id="border">
+            <div class="ListOfContents">
+                <button id="imgtheo">Introduction to Topology</button>
+                <button id="imgsetup">Experimental Setup</button>
+                <button id="imgexp">TaP</button>
+                <button id="imgexp">NbAs</button>
+                <button id="imgexp">GdPtBi</button>
+            </div>
+        </div>
+        
+    </body>
+    </html>
+
+<script>
+    function focusNextElement() {
+    //add all elements we want to include in our selection
+    var focussableElements =
+        'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
+    if (document.activeElement && document.activeElement.form) {
+        var focussable = Array.prototype.filter.call(
+        document.activeElement.form.querySelectorAll(focussableElements),
+        function (element) {
+            //check for visibility while always include the current activeElement
+            return (
+            element.offsetWidth > 0 ||
+            element.offsetHeight > 0 ||
+            element === document.activeElement
+            );
+        }
+        );
+        var index = focussable.indexOf(document.activeElement);
+        if (index > -1) {
+        var nextElement = focussable[index + 1] || focussable[0];
+        nextElement.focus();
+        }
+    }
+    }
+
+    
+</script>

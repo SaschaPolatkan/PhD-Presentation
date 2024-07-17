@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Topology</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        
+        <link rel="stylesheet" href="PhDPresentation.css" />
+        
+        <script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg.js" ></script>
+    </head>
+
+    <body>
+        <div class="page border", style="flex-direction: column;">
+            <div class="border-blue", style="width: 50%; height: 20%; z-index: 5;"><h2 style="padding: 0vh 0vw 0vh 0vw ;  ">Chiral Anomaly</h2></div>
+            <div class="border-blue", style="flex-direction: column;  width: 100%; height: 80%;  ">
+                
+                
+                <!-- <img id="imgs" src="Pictures/AnimBegin.jpg" style="padding: 4vh 1vw;"> -->
+                <div style="background-color: white; z-index: 3; height: 100%; width: 100%; "></div>
+                <img  src="Pictures/SpinPump1.svg" style="width: 50%;  z-index: 3; position: absolute; top: 30%; left: 0; right: 0;", id="1">
+                <img  src="Pictures/SpinPump2.svg" style="width: 50%;  z-index: 2; position: absolute; top: 30%; left: 0; right: 0;", id="2" >
+                <img  src="Pictures/SpinPump3.svg" style="width: 50%;  z-index: 1; position: absolute; top: 30%; left: 0; right: 0;", id="3" >
+                <img  src="Pictures/SpinPump4.svg" style="width: 50%;  z-index: 0; position: absolute; top: 30%; left: 0; right: 0;", id="4" >
+                
+                
+
+                
+               </div>
+               <div  style="flex-direction: column;  position: absolute;  top: 48vh; right: 4vw; z-index: 10;">
+                <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+                <p></p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+    </html>
+
+
+    <script>
+        //Defining the variable pageNavOff as "True" turn the page navigation off
+        //This is not a boolean. Apparently true booleans are not good.
+        //let pageNavOff="true";
+    
+        const vids = [
+        "Pictures/SpinPump1.svg",
+        "Pictures/SpinPump2.svg",
+        "Pictures/SpinPump3.svg",
+        "Pictures/SpinPump4.svg",
+        ];
+    
+        let ind =0
+        
+    
+        document.addEventListener("keydown", (evt) => {
+        if (evt.isComposing ) {
+            return;
+        }
+        evt = evt || window.evt;
+        if (evt.key=="Enter") {
+            let zind1=Number(document.getElementById("1").style.zIndex);
+            let zind2=Number(document.getElementById("2").style.zIndex);
+            let zind3=Number(document.getElementById("3").style.zIndex);
+            let zind4=Number(document.getElementById("4").style.zIndex);
+            zind1=zind1+1;
+            zind2=zind2+1;
+            zind3=zind3+1;
+            zind4=zind4+1;
+            //document.getElementById("left").innerHTML=zind%4;
+            document.getElementById("1").style.zIndex =String(zind1%4);
+            document.getElementById("2").style.zIndex =String(zind2%4);
+            document.getElementById("3").style.zIndex =String(zind3%4);
+            document.getElementById("4").style.zIndex =String(zind4%4);
+    
+             
+        }
+        }); 
+        
+        
+    </script>
+
+<script src="PhDPresentation.js"></script>

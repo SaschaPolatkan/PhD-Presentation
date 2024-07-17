@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>TaP</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        <link rel="stylesheet" href="PhDPresentation.css" />
+    </head>
+
+    <body>
+        <div class="page border">
+            <h1 style="position: absolute; top: 4%;"></h1>
+            <video id="vid" width="130%" style="z-index: 0; position: absolute; top: 18%; right: 0%; left: -20%"> <!-- Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.  -->
+                <!-- <source  src="Pictures/NodalLineAnimation.mp4" type="video/mp4"> -->
+                <source  src="Pictures/ani.mp4" type="video/mp4">
+            </video>
+
+            <div  style="flex-direction: column;  position: absolute;  top: 2%; right: 4vw;">
+                <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+                <p></p>
+            </div>
+            
+        </div>
+
+        
+        
+    </body>
+    </html>
+
+
+<script>
+    document.addEventListener("keydown", (evt) => {
+if (evt.isComposing ) {
+    return;
+}
+evt = evt || window.evt;
+if (evt.key=="Enter") {
+    var video = document.getElementById('vid'); 
+    video.paused ? video.play() : video.pause();
+    //document.getElementById("vids").src=vids[ind];
+}
+});
+</script>
+<script src="PhDPresentation.js"></script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>TaP</title>
+        <meta name="description" content="PhDPresentation"/>
+        <meta name="author" content="Sascha Polatkan"/>
+
+        <!-- This connects your CSS stylesheet-->
+        <link rel="stylesheet" href="PhDPresentation.css" />
+    </head>
+
+    <body>
+        <div class="page border" style="flex-direction: row;">
+            <div id="left" class="border-blue", style="height: 100%; flex-direction: row; width: 40%; text-align: left; justify-content: start;">
+                <h1 style="border-right: 2px solid; margin-right: auto; padding-top: 15vh; padding-bottom: 15vh; padding-right: 5vw;">Measurement</h1>
+            </div>
+            
+            <div class="border-blue", style="  height: 100%; flex-direction: row; max-width: 60%;">
+                <div class="border-blue" style=" height: 100%; max-width: 35%;">
+                        <!-- <h2 style="height: 10%; padding: 0vh 0vw 1vh 0vw;">TaP - Measurement </h2> -->
+                        <img  src="Pictures/SampleInField.svg" style="max-width: 80%; height: 80%;">
+                </div>
+
+                <div class="border-blue" style=" height: 100%;  ">
+                    <img  src="Pictures/TapMeasMarks.svg" style="height: 100%; max-height: 100%;  ">
+                </div>
+                    
+            </div>
+                
+            <div  style="flex-direction: column;  position: absolute;  top: 0vh; right: 0vw; z-index: 0;">
+                <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
+                <p></p>
+            </div>
+            
+        </div>
+        
+    </body>
+    </html>
+
+<script id="script-interceptor">
+    //Defining the variable pageNavOff as "True" turn the page navigation off
+    //This is not a boolean. Apparently true booleans are not good.
+    //let pageNavOff="true";
+    
+
+    document.addEventListener("keydown", (evt) => {
+    if (evt.isComposing ) {
+        return;
+    }
+    evt = evt || window.evt;
+    if (evt.key=="Enter") {
+        document.getElementById("left").innerHTML ='<img  src="Pictures/FigTapZeroField_Kemmler_presentation.svg" style="max-width: 100%; height: 100%;">'
+        
+    }
+    }); 
+    
+    
+</script>
+<script src="PhDPresentation.js"></script>
