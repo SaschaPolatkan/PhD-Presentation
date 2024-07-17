@@ -32,39 +32,6 @@
                             </p>
                         </div>
 
-                        <div style="width: 47%; height: 38%; z-index: 2; position: absolute;" id="2">
-                            <p style="font-size: 1.25vw;">
-                                $$H= \begin{pmatrix}
-                                \frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} +\color{red}{\mu_{\frac{3}{2}} B}& 	0 & 		0 & 		0 \\
-                                0 & 		\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} + \color{red}{\mu_{\frac{1}{2}} B}& 		0 & 	0 \\
-                                0 & 		0 & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} +\color{red}{\mu_{-\frac{1}{2}} B}& 		0 \\
-                                0 & 		0 & 		0 & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} + \color{red}{\mu_{-\frac{3}{2}} B}
-                            \end{pmatrix} + \color{red}{\Delta \cdot B}$$
-                            </p>
-                        </div>
-
-                        <div style="width: 47%; height: 38%; z-index: 1; position: absolute;" id="3">
-                            <p style="font-size: 1.25vw;">
-                                $$H= \begin{pmatrix}
-                                \frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} +\mu_{\frac{3}{2}} B& 	 0 & 		\color{red}{\frac{1}{2}Y_+} & 		0 \\
-                                0 & 		\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} + \mu_{\frac{1}{2}} B& 		0 & 	\color{red}{-\frac{1}{2}Y_+} \\
-                                \color{red}{\frac{1}{2}Y_+} & 		0 & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} +\mu_{-\frac{1}{2}} B& 		0 \\
-                                0 & 		\color{red}{-\frac{1}{2}Y_+} & 		0 & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} + \mu_{-\frac{3}{2}} B
-                            \end{pmatrix} + \Delta \cdot B$$
-                            </p>
-                        </div>
-
-                        <div style="width: 47%; height: 38%; z-index: 0; position: absolute;" id="4">
-                            <p style="font-size: 1.25vw;">
-                                $$H= \begin{pmatrix}
-                                \frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} +\mu_{\frac{3}{2}} B& 	\color{red}{\frac{1}{2}Y_-} & 		\frac{1}{2}Y_+ & 		0 \\
-                                \color{red}{\frac{1}{2}Y_-} & 		\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} + \mu_{\frac{1}{2}} B& 		\color{red}{Y_-} & 	-\frac{1}{2}Y_+ \\
-                                \frac{1}{2}Y_+ & 		\color{red}{Y_-} & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{h}} +\mu_{-\frac{1}{2}} B& 		\color{red}{\frac{1}{2}Y_-} \\
-                                0 & 		-\frac{1}{2}Y_+ & 		\color{red}{\frac{1}{2}Y_-} & 	\frac{\hbar^2 \mathbf{q}^2}{2 m_{e}} + \mu_{-\frac{3}{2}} B
-                            \end{pmatrix} + \Delta \cdot B$$
-                            </p>
-                        </div>
-
                         
                     </div>
                     
@@ -86,11 +53,6 @@
 
 
 <script>
-    //Defining the variable pageNavOff as "True" turn the page navigation off
-    //This is not a boolean. Apparently true booleans are not good.
-    //let pageNavOff="true";
-
-
     let ind =0
     
 
@@ -101,20 +63,10 @@
     evt = evt || window.evt;
     if (evt.key=="Enter") {
         let zind1=Number(document.getElementById("1").style.zIndex);
-        let zind2=Number(document.getElementById("2").style.zIndex);
-        let zind3=Number(document.getElementById("3").style.zIndex);
-        let zind4=Number(document.getElementById("4").style.zIndex);
+      
         zind1=zind1+1;
-        zind2=zind2+1;
-        zind3=zind3+1;
-        zind4=zind4+1;
-        //document.getElementById("left").innerHTML=zind%4;
-        document.getElementById("1").style.zIndex =String(zind1%4);
-        document.getElementById("2").style.zIndex =String(zind2%4);
-        document.getElementById("3").style.zIndex =String(zind3%4);
-        document.getElementById("4").style.zIndex =String(zind4%4);
+      
 
-        /* p: parameters */
     }
     }); 
     
