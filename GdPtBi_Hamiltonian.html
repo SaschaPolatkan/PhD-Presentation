@@ -10,7 +10,7 @@
         
         <link rel="stylesheet" href="PhDPresentation.css" />
         
-        <script type="text/javascript" id="MathJax-script"  src="mathjax/es5/tex-svg.js" ></script>
+        <script type="text/javascript" id="MathJax-script" src="mathjax/es5/tex-svg.js" ></script>
         
     </head>
 
@@ -73,27 +73,6 @@
                 
             </div>
 
-            <div class="border-blue", style="flex-direction: column;  width: 50%; height: 100%; ">
-                <div><h2 style="padding: 0vh 0vw 6vh 0vw ; z-index: 5; ">Energy Bands</h2></div>
-                
-                <!-- <img id="imgs" src="Pictures/AnimBegin.jpg" style="padding: 4vh 1vw;"> -->
-               <div style="height: 85%;">
-                <div style="background-color: white; z-index: 3; height: 85%; width: 47%; position: absolute;  top: 10%"></div>
-
-                <video id="vid1" width="47%" height="80%" style="z-index: 3; position: absolute; top: 16%"> <!-- Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.  -->
-                    <source  src="Pictures/begin.mp4" type="video/mp4">
-                </video>
-                <video id="vid2" width="47%" height="80%" style="z-index: 2; position: absolute; top: 16%"> <!-- Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.  -->
-                    <source  src="Pictures/zee.mp4" type="video/mp4">
-                </video>
-                <video id="vid3" width="47%" height="80%" style="z-index: 1; position: absolute; top: 16%"> <!-- Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.  -->
-                    <source  src="Pictures/sym.mp4" type="video/mp4">
-                </video>
-                <video id="vid4" width="47%" height="80.5%" style="z-index: 0; position: absolute; top: 16%"> <!-- Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.  -->
-                    <source  src="Pictures/asym.mp4" type="video/mp4">
-                </video>
-               </div>
-            </div>
 
             <div  style="flex-direction: column;  position: absolute;  top: 48vh; right: 4vw; z-index: 10;">
                 <button class="btn" style="width: 4vw; padding: 1vh;">↵</button>
@@ -111,12 +90,6 @@
     //This is not a boolean. Apparently true booleans are not good.
     //let pageNavOff="true";
 
-    const vids = [
-    "Pictures/begin.mp4",
-    "Pictures/zee.mp4",
-    "Pictures/sym.mp4",
-    "Pictures/asym.mp4",
-    ];
 
     let ind =0
     
@@ -142,38 +115,6 @@
         document.getElementById("4").style.zIndex =String(zind4%4);
 
         /* p: parameters */
-        let zind1p=Number(document.getElementById("1p").style.zIndex);
-        let zind2p=Number(document.getElementById("2p").style.zIndex);
-        let zind3p=Number(document.getElementById("3p").style.zIndex);
-        zind1p=zind1p+1;
-        zind2p=zind2p+1;
-        zind3p=zind3p+1;
-        //document.getElementById("left").innerHTML=zind%4;
-        document.getElementById("1p").style.zIndex =String(zind1p%4);
-        document.getElementById("2p").style.zIndex =String(zind2p%4);
-        document.getElementById("3p").style.zIndex =String(zind3p%4);
-
-        ind=(ind+1)%4;
-        var video1 = document.getElementById('vid1'); 
-        var video2 = document.getElementById('vid2'); 
-        var video3 = document.getElementById('vid3'); 
-        var video4 = document.getElementById('vid4'); 
-        const videoarr = [video1,video2,video3,video4]
-        let zindv1=Number(document.getElementById("vid1").style.zIndex);
-        let zindv2=Number(document.getElementById("vid2").style.zIndex);
-        let zindv3=Number(document.getElementById("vid3").style.zIndex);
-        let zindv4=Number(document.getElementById("vid4").style.zIndex);
-        zindv1=(zindv1+1)%4;
-        zindv2=(zindv2+1)%4;
-        zindv3=(zindv3+1)%4;
-        zindv4=(zindv4+1)%4;
-        document.getElementById("vid1").style.zIndex =String(zindv1);
-        document.getElementById("vid2").style.zIndex =String(zindv2);
-        document.getElementById("vid3").style.zIndex =String(zindv3);
-        document.getElementById("vid4").style.zIndex =String(zindv4);
-        videoarr[ind].paused ? videoarr[ind].play() : videoarr[ind].pause();
-        //document.getElementById("vids").src=vids[ind];
-         
     }
     }); 
     
